@@ -13,7 +13,7 @@ btnCreate.addEventListener('click', function() {
     obj.projectName = projectName.value;
     obj.startDate = startDate.value;
     obj.endDate= endDate.value;
-    obj.duration = calcDur(obj.startDate, obj.endDate); // NameFile : myProjectCalDuration.js
+    obj.duration = calcDur(obj.startDate, obj.endDate); // myProjectCalDur.js : 1
     obj.description = description.value;
     obj.uploadImg = uploadImg.files;
     if(obj.uploadImg.length != 0) {
@@ -57,7 +57,11 @@ btnCreate.addEventListener('click', function() {
     if(obj.projectName != "" && obj.startDate != "" && obj.endDate != "" && obj.description != "" && obj.renderImg != "") {
         
         dataForm.push(obj);
-        visualization(); // NameFile : myProjectVisualization.js
+        visualization(); // myProjectVisualization.js : 1
+
+        setTimeout(function() {
+            renderData(); // myProject.js : 74
+        }, 1200);
         
     } else {
         alert('Silahkan isi field yang wajib diisi');
@@ -209,25 +213,24 @@ function renderData() {
     }
 
     if(dataForm.length == 1) {
-        myProjectDetail1();
+        myProjectDetail1(); // myProjectDetail.js 1
     } else if(dataForm.length == 2) {
-        myProjectDetail2();
+        myProjectDetail2(); // myProjectDetail.js 60
     } else if(dataForm.length == 3) {
-        myProjectDetail3();
+        myProjectDetail3(); // myProjectDetail.js 166
     } else if(dataForm.length == 4) {
-        myProjectDetail4();
+        myProjectDetail4(); // myProjectDetail.js 319
     } else if(dataForm.length == 5) {
-        myProjectDetail5();
+        myProjectDetail5(); // myProjectDetail.js 519
     } else if(dataForm.length == 6) {
-        myProjectDetail6();
+        myProjectDetail6(); // myProjectDetail.js 766
     } else if(dataForm.length == 7) {
-        myProjectDetail7();
+        myProjectDetail7(); // myProjectDetail.js 1060
     } else if(dataForm.length == 8) {
-        myProjectDetail8();
+        myProjectDetail8(); // myProjectDetail.js 1401
     } else if(dataForm.length == 9) {
-        myProjectDetail9();
+        myProjectDetail9(); // myProjectDetail.js 1789
     }
-
 
 }
 

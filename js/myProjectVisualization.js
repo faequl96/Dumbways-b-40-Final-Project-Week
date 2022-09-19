@@ -38,8 +38,6 @@ function visualization() {
         document.querySelector('.checkbox .vueJs').checked = false;
         document.querySelector('.checkbox .typeScript').checked = false;
 
-
-        renderData();
         console.log(dataForm)
     }, 1500);
 }
